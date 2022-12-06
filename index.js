@@ -18,12 +18,14 @@ app.get('/', (req, res) => {
 
 app.get('/frostica', (req, res) => {
     const url = 'https://cors-proxy-cw4l.onrender.com/https://www.8thwall.com/temp-url-api/browse/811c4d13-afe7-435d-8fa7-9698a7de8210';
-    let res = ''
-    axios.get(url, config).then(res => {
-        const json = JSON.parse(res)
+    axios.get(url, config).then(result => {
+        console.log(result.data)
+        // const json = JSON.parse(result.data)
+        const json = result.data
         const shortLink = json.shortLink;
         const finalLink = 'https://8th.io/' + shortLink
-        window.location.href = finalLink;
+        // window.location.href = finalLink;
+        res.redirect(finalLink)
     })
 })
 
