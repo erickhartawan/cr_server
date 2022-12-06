@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/frostica', (req, res) => {
-    const url = 'https://cors-proxy-cw4l.onrender.com/https://www.8thwall.com/temp-url-api/browse/3b078cd3-b125-4cdf-968c-7261f2f354bb';
+    const url = 'https://cors-proxy-cw4l.onrender.com/https://www.8thwall.com/temp-url-api/browse/811c4d13-afe7-435d-8fa7-9698a7de8210';
     let res = ''
     axios.get(url, config).then(res => {
         const json = JSON.parse(res)
